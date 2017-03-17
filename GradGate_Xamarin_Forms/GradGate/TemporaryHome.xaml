@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GradGate.TemporaryHome" xmlns:sys="clr-namespace:System;assembly=mscorlib" NavigationPage.HasNavigationBar="false"  BackgroundColor="#6495ED">
+  <ScrollView>
+    <StackLayout >
+      <Label></Label>
+      <Label Text="Temporary Accommodations"
+             FontSize="Medium" VerticalOptions="Center" HorizontalTextAlignment= "Center" TextColor="White" FontAttributes = "Bold"></Label>
+      <Label/>
+      <Entry x:Name="name" Placeholder="Name" TextColor="Gray" Margin="10, 0, 10, 0" ></Entry>
+      <Entry x:Name="email" Placeholder ="Email" TextColor="Gray" Margin="10, 0, 10, 0" ></Entry>
+      <StackLayout Orientation="Horizontal" >
+        <Label Text="Arriving" FontSize="Medium" VerticalOptions="Center" HorizontalTextAlignment= "Center" TextColor="White" Margin="10, 0, 10, 0"></Label>
+        <StackLayout BackgroundColor="Silver"  >
+          <DatePicker x:Name="date" VerticalOptions="Start" Date="{x:Static sys:DateTime.Now}">
+            <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+            <DatePicker.MinimumDate>
+              <sys:DateTime x:FactoryMethod="Parse">
+                <x:Arguments>
+                  <x:String>Jan 1 2015</x:String>
+                </x:Arguments>
+              </sys:DateTime>
+            </DatePicker.MinimumDate>
+            <DatePicker.MaximumDate>
+              <sys:DateTime x:FactoryMethod="Parse">
+                <x:Arguments>
+                  <x:String>Dec 31 2050</x:String>
+                </x:Arguments>
+              </sys:DateTime>
+            </DatePicker.MaximumDate>
+          </DatePicker>
+        </StackLayout>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal" >
+        <Label Text="Length of stay" FontSize="Medium" VerticalOptions="Center" HorizontalTextAlignment= "Center" TextColor="White" Margin="10, 0, 10, 0"></Label>
+        <Entry x:Name="day" Placeholder ="Days" TextColor="Gray"></Entry>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal" >
+        <Label Text="Gender" FontSize="Medium" VerticalOptions="Center" HorizontalTextAlignment= "Center" TextColor="White" Margin="10, 0, 10, 0"></Label>
+        <Entry x:Name="Gender" Placeholder="F/M" TextColor="Gray"></Entry>
+      </StackLayout>
+      <Label x:Name="other"  Text="Other preference" FontSize="Medium"  TextColor="White" Margin="10, 0, 10, 0"></Label>
+      <Editor Margin="10, 0, 10, 0">    </Editor>
+         <Label></Label>
+      <Label Text="Request will be sent to GradeGate Volunteer" FontSize="Small" VerticalOptions="Center" HorizontalTextAlignment= "Center" TextColor="White" Margin="10, 0, 10, 0" ></Label>
+      <Button Text="Send" HorizontalOptions="CenterAndExpand" TextColor="White"
+        BackgroundColor="#6495ED"
+        BorderColor="White"
+         Clicked="OnSendRequest" ></Button>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

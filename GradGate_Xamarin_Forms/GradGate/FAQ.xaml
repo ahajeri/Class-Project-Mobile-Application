@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GradGate.FAQ" NavigationPage.HasNavigationBar="false" BackgroundColor="White">
+ 
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="labelStyle" TargetType="Label">
+        <Setter Property="VerticalOptions"
+                Value="Center" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="TextColor" Value="#6495ED" />
+
+      </Style>
+      <Style x:Key="subLabelStyle" TargetType="Label">
+        <Setter Property="VerticalOptions"
+                Value="Center" />
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="TextColor" Value="#6495ED" />
+      </Style>
+      <Style x:Key="textStyle" TargetType="Label">
+        <Setter Property="VerticalOptions"
+                Value="Center" />
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="TextColor" Value="#1B1A19" />
+      </Style>
+      <Style x:Key="uriStyle" TargetType="Label">
+        <Setter Property="VerticalOptions"
+                Value="Center" />
+        <Setter Property="FontSize" Value="Micro" />
+        <Setter Property="TextColor" Value="#6495ED" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <ContentPage.Content>
+    <ScrollView>
+      <Label/>
+    <StackLayout Spacing="20">
+      <Label Text="FAQs"
+             Style="{StaticResource labelStyle}" />
+      <Label Text="This section contains variety of frequently asked questions. We have tried to cover most of the questions comprehensively"
+             Style="{StaticResource textStyle}"/>
+      <Label></Label>
+
+      <StackLayout BackgroundColor="Silver" Padding=".25" >
+        <Label x:Name ="listQLabel" BackgroundColor="White"  Text="How is the weather in Santa Clara?" Style="{StaticResource subLabelStyle}"/>
+      </StackLayout>
+       <Label x:Name ="ansLabel1" Style="{StaticResource textStyle}"  />
+        
+      <StackLayout BackgroundColor="Silver" Padding=".25" >
+        <Label x:Name ="listQLabel1" BackgroundColor="White"  Text=" Should I learn how to cook before I come?" Style="{StaticResource subLabelStyle}" />
+      </StackLayout>
+        <Label x:Name ="ansLabel2" Style="{StaticResource textStyle}"  />
+        
+      <StackLayout BackgroundColor="Silver" Padding=".25" >
+        <Label x:Name ="listQLabel2" Text="Are on campus jobs available?" BackgroundColor="White"  Style="{StaticResource subLabelStyle}" />
+      </StackLayout>
+        <Label x:Name ="ansLabel3" Style="{StaticResource textStyle}"  />
+
+      <StackLayout BackgroundColor="Silver" Padding=".25" >
+        <Label x:Name ="listQLabel3" BackgroundColor="White" Text="Are there temples near the University?" Style="{StaticResource subLabelStyle}" />
+      </StackLayout>
+        <Label x:Name ="ansLabel4" Style="{StaticResource textStyle}"  />
+
+      <StackLayout BackgroundColor="Silver" Padding=".25" >
+        <Label x:Name ="listQLabel4" BackgroundColor="White" Text="Can I visit India on vacation ?" Style="{StaticResource subLabelStyle}" />
+      </StackLayout>
+        <Label x:Name ="ansLabel5" Style="{StaticResource textStyle}"  />
+
+      <StackLayout BackgroundColor="Silver" Padding=".25" >
+        <Label x:Name ="listQLabel5" BackgroundColor="White" Text="Should I carry traditional clothes with me?" Style="{StaticResource subLabelStyle}" />
+      </StackLayout>
+        <Label x:Name ="ansLabel6" Style="{StaticResource textStyle}"  />
+
+      <StackLayout BackgroundColor="Silver" Padding=".25" >
+        <Label x:Name ="listQLabel6" BackgroundColor="White" Text="I use contact lenses. is there anything ?" Style="{StaticResource subLabelStyle}" />
+      </StackLayout>
+        <Label x:Name ="ansLabel7" Style="{StaticResource textStyle}"  />
+
+
+    </StackLayout>
+      </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

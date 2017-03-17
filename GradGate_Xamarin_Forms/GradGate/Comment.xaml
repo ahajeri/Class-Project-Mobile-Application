@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GradGate.Comment" NavigationPage.HasNavigationBar="false">
+  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+  
+  <ContentPage.Resources>
+      <ResourceDictionary>
+        <Style x:Key="labelStyle" TargetType="Label">
+          <Setter Property="VerticalOptions"
+                  Value="Center" />
+          <Setter Property="FontAttributes" Value="Bold" />
+          <Setter Property="HorizontalTextAlignment" Value="Center" />
+          <Setter Property="FontSize" Value="Large" />
+          <Setter Property="TextColor" Value="#ff6600" />
+
+        </Style>
+        <Style x:Key="subLabelStyle" TargetType="Label">
+          <Setter Property="VerticalOptions"
+                  Value="Center" />
+          <Setter Property="FontSize" Value="Medium" />
+          <Setter Property="TextColor" Value="#ff6600" />
+        </Style>
+        <Style x:Key="textStyle" TargetType="Label">
+          <Setter Property="VerticalOptions"
+                  Value="Center" />
+          <Setter Property="FontSize" Value="Small" />
+          <Setter Property="TextColor" Value="#1B1A19" />
+        </Style>
+        <Style x:Key="uriStyle" TargetType="Label">
+          <Setter Property="VerticalOptions"
+                  Value="Center" />
+          <Setter Property="FontSize" Value="Micro" />
+          <Setter Property="TextColor" Value="#ff6600" />
+        </Style>
+      </ResourceDictionary>
+    </ContentPage.Resources>
+
+  <ContentPage.Content>
+    <StackLayout>
+      <Label Text="How to get access card ?"
+             BackgroundColor="White"  Style="{StaticResource subLabelStyle}"/>
+      <Label Text="Ans: You need to go to admission office with your passport and I20, It will be done in 5Min "
+             Style="{StaticResource textStyle}"/>
+      <StackLayout VerticalOptions="EndAndExpand">
+        <Entry Text="Enter you answer here" TextColor="#ff6600"></Entry>
+        <Label></Label>
+        <Label></Label>
+      </StackLayout>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

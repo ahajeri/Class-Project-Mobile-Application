@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GradGate.PickUpPage" xmlns:sys="clr-namespace:System;assembly=mscorlib" NavigationPage.HasNavigationBar="false"  BackgroundColor="#6495ED">
+  <ScrollView>
+    <StackLayout>
+      <Label></Label>
+      <Label Text="Pick Up From Airport"
+              FontSize="Medium" VerticalOptions="Center" HorizontalTextAlignment= "Center" TextColor="White" FontAttributes = "Bold"></Label>
+      <Label></Label>
+      <Entry  x:Name="name" Placeholder="Name" TextColor="Gray" Margin="10, 0, 10, 0" ></Entry>
+      <Entry  x:Name="email" Placeholder ="Email" TextColor="Gray" Margin="10, 0, 10, 0" ></Entry>
+      <Entry  x:Name="airlines" Placeholder ="Airline Name" TextColor="Gray" Margin="10, 0, 10, 0" ></Entry>
+      <Entry  x:Name="flightnum" Placeholder ="Flight Number" TextColor="Gray" Margin="10, 0, 10, 0"></Entry>
+      <StackLayout Orientation="Horizontal">
+        <Label Text="Departure" FontSize="Medium" VerticalOptions="Center" HorizontalTextAlignment= "Center" TextColor="White" Margin="10, 0, 10, 0"></Label>
+        <StackLayout BackgroundColor="Silver" >
+          <DatePicker  x:Name="dDate" VerticalOptions="Start" Date="{x:Static sys:DateTime.Now}">
+            <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+            <DatePicker.MinimumDate>
+              <sys:DateTime x:FactoryMethod="Parse">
+                <x:Arguments>
+                  <x:String>Jan 1 2015</x:String>
+                </x:Arguments>
+              </sys:DateTime>
+            </DatePicker.MinimumDate>
+            <DatePicker.MaximumDate>
+              <sys:DateTime x:FactoryMethod="Parse">
+                <x:Arguments>
+                  <x:String>Dec 31 2050</x:String>
+                </x:Arguments>
+              </sys:DateTime>
+            </DatePicker.MaximumDate>
+          </DatePicker>
+        </StackLayout>
+      </StackLayout>
+
+      <StackLayout Orientation="Horizontal" >
+        <Label Text="Arrival" FontSize="Medium" VerticalOptions="Center" HorizontalTextAlignment= "Center" TextColor="White" Margin="10, 0, 10, 0" ></Label>
+        <StackLayout BackgroundColor="Silver" >
+          <DatePicker x:Name="aDate" VerticalOptions="Start" Date="{x:Static sys:DateTime.Now}">
+            <DatePicker.Format >yyyy-MM-dd</DatePicker.Format>
+            <DatePicker.MinimumDate>
+              <sys:DateTime x:FactoryMethod="Parse" >
+                <x:Arguments >
+                  <x:String>Jan 1 2015</x:String>
+                </x:Arguments>
+              </sys:DateTime>
+            </DatePicker.MinimumDate>
+            <DatePicker.MaximumDate>
+              <sys:DateTime x:FactoryMethod="Parse">
+                <x:Arguments>
+                  <x:String>Dec 31 2050</x:String>
+                </x:Arguments>
+              </sys:DateTime>
+            </DatePicker.MaximumDate>
+          </DatePicker>
+        </StackLayout>
+      </StackLayout>
+
+
+      <Entry x:Name="phone" Placeholder="Phone Number"
+             Keyboard="Numeric" TextColor="Gray" Margin="10, 0, 10, 0"  ></Entry>
+
+      <Entry x:Name="emePhone" Placeholder="Emergency Phone Number"
+             Keyboard="Numeric" TextColor="Gray" Margin="10, 0, 10, 0"  ></Entry>
+      <Label></Label>
+      <Label Text="Request will be sent to GradeGate Volunteer" FontSize="Small" VerticalOptions="Center" HorizontalTextAlignment= "Center" TextColor="White" Margin="10, 0, 10, 0"></Label>
+      <Button Text="Send" HorizontalOptions="CenterAndExpand" TextColor="White"
+         BackgroundColor="#6495ED"
+         BorderColor="White"
+          Clicked="OnSendRequest" ></Button>
+
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

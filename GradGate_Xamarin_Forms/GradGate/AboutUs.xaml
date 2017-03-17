@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GradGate.AboutUs" NavigationPage.HasNavigationBar="false" BackgroundColor="White">
+  
+  
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="labelStyle" TargetType="Label">
+        <Setter Property="VerticalOptions"
+                Value="Center" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#6495ED" />
+      </Style>
+      <Style x:Key="subLabelStyle" TargetType="Label">
+        <Setter Property="VerticalOptions"
+                Value="Center" />
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#6495ED" />
+      </Style>
+      <Style x:Key="textStyle" TargetType="Label">
+        <Setter Property="VerticalOptions"
+                Value="Center" />
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="Small" />
+      </Style>
+      <Style x:Key="uriStyle" TargetType="Label">
+        <Setter Property="VerticalOptions"
+                Value="Center" />
+        <Setter Property="FontSize" Value="Micro" />
+        <Setter Property="TextColor" Value="#6495ED" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout>
+        <Label></Label>
+        <Label Text="About Us"
+               Style="{StaticResource labelStyle}" />
+        <Label/>
+        <Label Text="Our goal is to have one resource that will provide all information required for a prospective student to plan a trip and start student life in USA."
+               Style="{StaticResource textStyle}" Margin="20, 0, 10, 0"  />
+        <Label></Label>
+        <Label Text="GradGate Current Board Members" Style="{StaticResource subLabelStyle}" Margin="20, 0, 10, 0" />
+        <Label x:Name ="mem1Label"  StyleId ="mem1Label" Text="Member 1" Style="{StaticResource uriStyle}" Margin="20, 0, 10, 0" />
+        <Label x:Name ="mem2Label"  StyleId ="mem2Label" Text="Member 2" Style="{StaticResource uriStyle}" Margin="20, 0, 10, 0"/>
+        <Label x:Name ="mem3Label"  StyleId ="mem3Label" Text="Member 3" Style="{StaticResource uriStyle}" Margin="20, 0, 10, 0" />
+        <Label></Label>
+        <Label Text="Contact Us" Style="{StaticResource subLabelStyle}" Margin="20, 0, 10, 0" />
+        <StackLayout Orientation="Horizontal">
+        <Image  x:Name ="emailphoto" WidthRequest="30" HeightRequest ="30"  Margin="10, 0, 0, 0"/>
+        <Label x:Name="mailU" Text="gradgate@gmail.com" Style="{StaticResource textStyle}" Margin="20, 0, 10, 0"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+          <Image   x:Name ="phonephoto"  WidthRequest="30" HeightRequest ="30"  Margin="10, 0, 0, 0"/>
+        <Label x:Name="phoneU" Text="408-554-4000" Style="{StaticResource textStyle}" Margin="20, 0, 10, 0"/>
+        </StackLayout>
+        <Label></Label>
+        <Label Text="Follow Us" Style="{StaticResource subLabelStyle}" Margin="20, 0, 10, 0"/>
+        <StackLayout Orientation="Horizontal">
+        <Image x:Name="ButtonImage"  WidthRequest="50" HeightRequest ="50"   Margin="20, 0, 0, 0"/>
+        <Image x:Name="ButtonImage1"  WidthRequest="40" HeightRequest ="40" Margin="0, 5, 0, 0"/>
+           <Image x:Name="ButtonImage2"  WidthRequest="40" HeightRequest ="40" Margin="0, 5, 0, 0"/>
+        </StackLayout>
+    
+
+</StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

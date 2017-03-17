@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 	xmlns="http://xamarin.com/schemas/2014/forms" 
+				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+				x:Class="GradGate.TodoList"
+				 BackgroundColor="#6495ED">
+  <Grid RowSpacing="0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <ActivityIndicator Grid.RowSpan="2"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       IsVisible="False"
+                       IsEnabled="True"
+                       x:Name="syncIndicator"/>
+    
+    
+    <StackLayout Grid.Row="0" BackgroundColor="White" Padding="10,30,10,5">
+      <Label TextColor="#6495ED" Text="Your Questions" />
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition/>
+          <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Entry x:Name="newItemName"
+                  Placeholder="Post your  Question Here"  />
+        <StackLayout x:Name="buttonsPanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+          <Button Text="+" TextColor="White"
+                  BackgroundColor="#6495ED"
+                  Clicked="OnAdd"   BorderColor="White"/>
+        </StackLayout>
+      </Grid>
+     
+    </StackLayout>
+    <ListView x:Name="todoList"
+				ItemSelected="OnSelected"
+				IsPullToRefreshEnabled="true" Refreshing="OnRefresh" 
+				Grid.Row="1">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <ViewCell.ContextActions>
+              <MenuItem Clicked="OnComplete" Text="Complete" CommandParameter="{Binding .}"/>
+            </ViewCell.ContextActions>
+            <Label Text="{Binding Name}"  FontSize = "Medium" TextColor ="White" Margin="10, 0, 10, 20"></Label>
+              
+           
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+
+  </Grid>
+
+ 
+ 
+    
+   
+      
+  
+</ContentPage>

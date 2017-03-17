@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GradGate.MainPage"   BackgroundColor="White">
+  
+
+  <ContentPage.ToolbarItems Title="Prospective Student" >
+    <ToolbarItem Text="Apartment Near You"
+                 Order="Secondary"
+                 Clicked="OnToolbarItemClicked" >
+    </ToolbarItem>
+
+    <ToolbarItem Name="Pack Your Bags"
+                  Order="Secondary"
+                 Clicked="OnToolbarItemClicked"  >
+    </ToolbarItem>
+
+    <ToolbarItem Name="Health Insurance"
+                  Order="Secondary"
+                 Clicked="OnToolbarItemClicked" >
+    </ToolbarItem>
+    
+    <ToolbarItem Name="LogOut"
+                  Order="Secondary"
+                 Clicked="OnLogout" >
+    </ToolbarItem>
+  </ContentPage.ToolbarItems>
+  
+  
+  
+</ContentPage>

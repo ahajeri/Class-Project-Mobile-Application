@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GradGate.ApartmentNearYou" NavigationPage.HasNavigationBar="false"    BackgroundColor="White">
+  
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="labelStyle" TargetType="Label">
+        <Setter Property="VerticalOptions"
+                Value="Center" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#6495ED" />
+      </Style>
+      <Style x:Key="subLabelStyle" TargetType="Label">
+        <Setter Property="VerticalOptions"
+                Value="Center" />
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#6495ED" />
+      </Style>
+      <Style x:Key="textStyle" TargetType="Label">
+        <Setter Property="VerticalOptions"
+                Value="Center" />
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="TextColor" Value="Black" />
+      </Style>
+      <Style x:Key="uriStyle" TargetType="Label">
+        <Setter Property="VerticalOptions"
+                Value="Center" />
+        <Setter Property="FontSize" Value="Micro" />
+        <Setter Property="TextColor" Value="#6495ED" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout>
+        <Label />
+        <Label Text="Apartment Near You"
+               Style="{StaticResource labelStyle}" />
+        <Label/>
+        <Label Text="Timberleaf Apartments" Style="{StaticResource subLabelStyle}" Margin="20, 0, 10, 0"/>
+        <Label Text="Address: 2147 Newhall St Santa Clara, CA 95050" Style="{StaticResource textStyle}" Margin="20, 0, 10, 0"/>
+        <Label Text="Distance from University: 1.2 miles  " Style="{StaticResource textStyle}" Margin="20, 0, 10, 0"/>
+        <Label x:Name ="uriAprt" StyleId ="uriLabel1" Text="https://prometheusreg.com/san-francisco-properties/timberleaf" Style="{StaticResource uriStyle}" Margin="20, 0, 10, 0"/>
+        <Label />
+
+        <Label Text="Park Central Apartments" Style="{StaticResource subLabelStyle}" Margin="20, 0, 10, 0"/>
+        <Label Text="Address: 1050 Benton St, Santa Clara,CA 95050 " Style="{StaticResource textStyle}" Margin="20, 0, 10, 0"/>
+        <Label Text="Phone Number: (408) 983-1050 " Style="{StaticResource textStyle}" Margin="20, 0, 10, 0"/>
+        <Label Text="Distance from University: 0.8 miles " Style="{StaticResource textStyle}" Margin="20, 0, 10, 0"/>
+        <Label x:Name ="uriAprt1" StyleId ="uriLabel1" Text="https://prometheusreg.com/san-francisco-properties/park-central" Style="{StaticResource uriStyle}" Margin="20, 0, 10, 0"/>
+        <Label />
+
+        <Label Text="Domicilio Apartments" Style="{StaticResource subLabelStyle}" Margin="20, 0, 10, 0"/>
+        <Label Text="Address: 431 El Camino Real, Santa Clara, CA 95050" Style="{StaticResource textStyle}" Margin="20, 0, 10, 0"/>
+        <Label Text="Phone Number: (408) 345-3333 " Style="{StaticResource textStyle}" Margin="20, 0, 10, 0"/>
+        <Label Text="Distance from University: 0.3 miles" Style="{StaticResource textStyle}" Margin="20, 0, 10, 0"/>
+        <Label x:Name ="uriAprt2" StyleId ="uriLabel1" Text="http://www.domicilioapts.com/" Style="{StaticResource uriStyle}" Margin="20, 0, 10, 0"/>
+        <Label />
+
+        <Label Text="Tamarack Apartments" Style="{StaticResource subLabelStyle}" Margin="20, 0, 10, 0"/>
+        <Label Text="Address: 1255 Lincoln St, Santa Clara, CA 95050" Style="{StaticResource textStyle}" Margin="20, 0, 10, 0"/>
+        <Label Text="Phone Number: (408) 246-6343 " Style="{StaticResource textStyle}" Margin="20, 0, 10, 0"/>
+        <Label Text="Distance from University: 0.7 miles" Style="{StaticResource textStyle}" Margin="20, 0, 10, 0"/>
+        <Label x:Name ="uriAprt3" StyleId ="uriLabel1" Text="http://www.tamarackapts.com/" Style="{StaticResource uriStyle}" Margin="20, 0, 10, 0"/>
+        <Label />
+
+
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

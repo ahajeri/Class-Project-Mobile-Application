@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GradGate.LoginPage" BackgroundColor="#6495ED">
+
+  <StackLayout >
+    <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center" >
+      <Label Text="Grad"
+           FontSize="Large" VerticalOptions="Center" HorizontalTextAlignment= "Center" TextColor="White" FontAttributes = "Bold" Margin="5,50,0,0"></Label>
+      <Label/>
+      <Image x:Name="ButtonImage1"  WidthRequest="100" HeightRequest ="100" Margin="5,50,0,0"/>
+      <Label Text="Gate"
+            FontSize="Large" VerticalOptions="Center" HorizontalTextAlignment= "Center" TextColor="White" FontAttributes = "Bold" Margin="5,50,0,0"></Label>
+      <Label/>
+    </StackLayout>
+    <Entry Placeholder="Email Address" x:Name="emailU" Margin="20, 0, 15, 5" TextColor="Gray" ></Entry>
+    <Entry Placeholder="PassWord" x:Name="passwordU" IsPassword="true" Margin="20, 0, 15, 5"  TextColor="Gray"></Entry>
+    <Button Text="Sign In" HorizontalOptions="CenterAndExpand" TextColor="White"
+  BackgroundColor="#6495ED"
+  BorderColor="White"
+  Clicked="OnSignIn"></Button>
+    <StackLayout VerticalOptions="CenterAndExpand">
+      <Label Text="Welcome, For New User"
+          FontSize="Small" VerticalOptions="Center" HorizontalTextAlignment= "Center" TextColor="White" FontAttributes = "Bold" Margin="5,50,0,0"></Label>
+      <Label/>
+      <Button Text="Sign Up" HorizontalOptions="CenterAndExpand" TextColor="White"
+  BackgroundColor="#6495ED"
+  BorderColor="White"
+  Clicked="OnCreate"  ></Button>
+      <Label></Label>
+      <Label></Label>
+      <Label></Label>
+    </StackLayout>
+  </StackLayout>
+  
+  
+  
+  
+  
+</ContentPage>

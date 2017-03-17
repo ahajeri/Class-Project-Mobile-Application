@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GradGate.ReplyPage" NavigationPage.HasNavigationBar="false" BackgroundColor="White">
+    <ContentPage.Resources>
+      <ResourceDictionary>
+        <Style x:Key="labelStyle" TargetType="Label">
+          <Setter Property="VerticalOptions"
+                  Value="Center" />
+          <Setter Property="FontAttributes" Value="Bold" />
+          <Setter Property="HorizontalTextAlignment" Value="Center" />
+          <Setter Property="FontSize" Value="Large" />
+          <Setter Property="TextColor" Value="#6495ED" />
+
+        </Style>
+        <Style x:Key="subLabelStyle" TargetType="Label">
+          <Setter Property="VerticalOptions"
+                  Value="Center" />
+          <Setter Property="FontSize" Value="Medium" />
+          <Setter Property="TextColor" Value="#ff6600" />
+        </Style>
+        <Style x:Key="textStyle" TargetType="Label">
+          <Setter Property="VerticalOptions"
+                  Value="Center" />
+          <Setter Property="FontSize" Value="Small" />
+          <Setter Property="TextColor" Value="#1B1A19" />
+        </Style>
+        <Style x:Key="uriStyle" TargetType="Label">
+          <Setter Property="VerticalOptions"
+                  Value="Center" />
+          <Setter Property="FontSize" Value="Micro" />
+          <Setter Property="TextColor" Value="#ff6600" />
+        </Style>
+      </ResourceDictionary>
+    </ContentPage.Resources>
+
+  <ContentPage.Content>
+    <StackLayout>
+      <Label x:Name="question"
+             BackgroundColor="White"  Style="{StaticResource subLabelStyle}"/>
+      <Label x:Name="reply" Style="{StaticResource textStyle}" HorizontalTextAlignment="Center" TextColor ="#6495ED" FontSize="Medium" FontAttributes="Bold" />
+        <ListView x:Name="replyList">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+                        
+                <Label Text="{Binding ReplyPost}" FontSize = "Medium" TextColor ="#000000" VerticalOptions ="Center" Margin="10, 15, 0, 0"  />
+                       
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>       
+      <StackLayout VerticalOptions="EndAndExpand">
+        <Entry x:Name="replyEntry" Completed="OnComplete" Placeholder="Enter you answer here" TextColor="#6495ED"></Entry>       
+        <Label></Label>
+        <Label></Label>
+      </StackLayout>
+    </StackLayout>
+  </ContentPage.Content> 
+</ContentPage>

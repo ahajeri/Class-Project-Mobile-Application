@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GradGate.HealthInsurance" NavigationPage.HasNavigationBar="false"  BackgroundColor="White">
+  
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="labelStyle" TargetType="Label">
+        <Setter Property="VerticalOptions"
+                Value="Center" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#6495ED" />
+      </Style>
+      <Style x:Key="subLabelStyle" TargetType="Label">
+        <Setter Property="VerticalOptions"
+                Value="Center" />
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#6495ED" />
+      </Style>
+      <Style x:Key="textStyle" TargetType="Label">
+        <Setter Property="VerticalOptions"
+                Value="Center" />
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontSize" Value="Small" />
+      </Style>
+      <Style x:Key="uriStyle" TargetType="Label">
+        <Setter Property="VerticalOptions"
+                Value="Center" />
+        <Setter Property="FontSize" Value="Micro" />
+        <Setter Property="TextColor" Value="#6495ED" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout>
+        <Label></Label>
+        <Label Text="Health Insurance"
+               Style="{StaticResource labelStyle}" />
+        <Label/>
+        <Label Text="All the international students enrolled at SCU have to compulsorily be enrolled in an insurance plan."
+               Style="{StaticResource textStyle}" />
+        <Label Text="Information regarding the health insurance is available on Following link below"
+                  Style="{StaticResource textStyle}" />
+        <Label x:Name ="uriLabel"  StyleId ="uriLabel" Text="https://www.scu.edu/cowell/insurance/waiver-information/" Style="{StaticResource uriStyle}" />
+        <Label Text="Insurance Waiver" Style="{StaticResource subLabelStyle}" />
+        <Label Text="If you are enrolled in any insurance plan apart from the one offered by the university please bear in mind that you need to fill a waiver form.
+" Style="{StaticResource textStyle}" />
+        <Label Text="There is deadline to fill the waiver form each quarter. If you don't adhere to the deadline, you will be automatically enrolled in the university insurance plan."
+               Style="{StaticResource textStyle}" />
+        <Label Text="F1 Student" Style="{StaticResource subLabelStyle}" />
+        <Label x:Name ="uriLabel1" StyleId ="uriLabel1" Text="https://www.scu.edu/cowell/insurance/f1students/" Style="{StaticResource uriStyle}"/>
+
+
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

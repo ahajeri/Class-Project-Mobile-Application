@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GradGate.SignUp"  BackgroundColor="#6495ED" >
+ 
+  <ScrollView>
+  <StackLayout >
+    <Label></Label>
+    <Label Text="Create Profile"
+           FontSize="Medium" VerticalOptions="Center" HorizontalTextAlignment= "Center" TextColor="White" FontAttributes = "Bold"></Label>
+    <Label/>
+    <Entry x:Name="nameU" Placeholder="* Name" TextColor="Gray" Margin="10, 0, 10, 0"></Entry>
+    <Entry x:Name="emailU" Placeholder ="* Email" TextColor="Gray" Margin="10, 0, 10, 0"></Entry>
+    <Entry x:Name="passwordU" Placeholder="* Password" IsPassword="True" FontSize="Medium" TextColor="Gray" Margin="10, 0, 10, 0" />
+    <Entry x:Name="confirmp" Placeholder="* Confirm" IsPassword="True" FontSize="Medium" TextColor="Gray" Margin="10, 0, 10, 0"/>
+    <Entry x:Name="phoneNumberU" Placeholder ="Phone Number" TextColor="Gray" Margin="10, 0, 10, 0"></Entry>
+    <Entry x:Name="collegeU" Placeholder ="College" TextColor="Gray" Margin="10, 0, 10, 0"></Entry>
+    <Entry x:Name="programU" Placeholder ="Program" TextColor="Gray" Margin="10, 0, 10, 0"></Entry>
+    <Entry Placeholder ="Year" TextColor="Gray" Margin="10, 0, 10, 0" > </Entry>
+    <StackLayout Orientation="Horizontal" >
+      <Label Text="Gender" FontSize="Medium" VerticalOptions="Center" HorizontalTextAlignment= "Center" TextColor="White"  Margin="10, 0, 10, 0"></Label>
+      <Entry Placeholder ="F/M" TextColor="Gray"></Entry>
+    </StackLayout>
+    <Label></Label>
+    <Label Text="By clicking signup, I agree to your term and condition " FontSize="Small" VerticalOptions="Center" HorizontalTextAlignment= "Center" TextColor="White"></Label>
+    <Button Text="SignUp" HorizontalOptions="CenterAndExpand" TextColor="White"
+       BackgroundColor="#6495ED"
+       BorderColor="White"
+       Clicked="OnSignup" ></Button>
+  
+  </StackLayout>
+  </ScrollView>
+</ContentPage>

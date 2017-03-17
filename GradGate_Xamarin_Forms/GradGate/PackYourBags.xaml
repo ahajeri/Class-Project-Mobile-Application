@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GradGate.PackYourBags" NavigationPage.HasNavigationBar="false" BackgroundColor="White" >
+  
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="labelStyle" TargetType="Label">
+        <Setter Property="VerticalOptions"
+                Value="Center" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="TextColor" Value="#6495ED" />
+
+      </Style>
+      <Style x:Key="subLabelStyle" TargetType="Label">
+        <Setter Property="VerticalOptions"
+                Value="Center" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="TextColor" Value="#6495ED" />
+      </Style>
+      <Style x:Key="textStyle" TargetType="Label">
+        <Setter Property="VerticalOptions"
+                Value="Center" />
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="TextColor" Value="Black" />
+      </Style>
+      <Style x:Key="uriStyle" TargetType="Label">
+        <Setter Property="VerticalOptions"
+                Value="Center" />
+        <Setter Property="FontSize" Value="Micro" />
+        <Setter Property="TextColor" Value="#6495ED" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <ContentPage.Content>
+    <ScrollView>
+    <StackLayout Spacing="20">
+      <Label/>
+      <Label Text="Pack Your Bags"
+             Style="{StaticResource labelStyle}" />
+      <StackLayout BackgroundColor="Silver" Padding=".25" >
+        <Label x:Name ="listLabel" BackgroundColor="White"  Text="Clothes" Style="{StaticResource subLabelStyle}"/>
+      </StackLayout>
+      <Label x:Name ="textLabel" Style="{StaticResource textStyle}" />
+      
+      <StackLayout BackgroundColor="Silver" Padding=".25" >
+        <Label x:Name ="listLabel1" BackgroundColor="White"  Text="Medicines" Style="{StaticResource subLabelStyle}" />
+      </StackLayout>
+      <Label x:Name ="textLabel1" Style="{StaticResource textStyle}" />
+      
+      <StackLayout BackgroundColor="Silver" Padding=".25" >
+        <Label x:Name ="listLabel2" Text="Utensils" BackgroundColor="White"  Style="{StaticResource subLabelStyle}" />
+      </StackLayout>
+      <Label x:Name ="textLabel2" Style="{StaticResource textStyle}" />
+      
+      <StackLayout BackgroundColor="Silver" Padding=".25" >
+        <Label x:Name ="listLabel3" BackgroundColor="White" Text="Stationary" Style="{StaticResource subLabelStyle}" />
+      </StackLayout>
+      <Label x:Name ="textLabel3" Style="{StaticResource textStyle}" />
+      
+      <StackLayout BackgroundColor="Silver" Padding=".25" >
+        <Label x:Name ="listLabel4" BackgroundColor="White" Text="Spices" Style="{StaticResource subLabelStyle}" />
+      </StackLayout>
+      <Label x:Name ="textLabel4" Style="{StaticResource textStyle}" />
+      
+    </StackLayout>
+    </ScrollView>
+    
+  </ContentPage.Content>
+</ContentPage>
