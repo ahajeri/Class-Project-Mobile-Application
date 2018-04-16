@@ -12,4 +12,4 @@ Designed a mobile application that will enable new students to get connected wit
 
 <img width="394" alt="screen shot 2018-04-16 at 4 19 58 pm" src="https://user-images.githubusercontent.com/10774588/38840293-bb896118-4193-11e8-942b-ac61a9fb4d67.png">
 
-<img width="404" alt="screen shot 2018-04-16 at 4 20 34 pm" src="https://user-images.githubusercontent.com/10774588/38840102-cf1c2e82-4192-11e8-9af2-5e786e2b80d3.png">
+<img width="404" alt="screen shot 2018-04-16 at 4 20 34 pm" src="https://user-images.githubusercontent.com/10774588/38840324-e27e2f42-4193-11e8-81e1-cf39e669c584.png">
